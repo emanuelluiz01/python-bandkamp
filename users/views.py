@@ -10,6 +10,7 @@ class UserView(APIView):
     def post(self, request: Request) -> Response:
         """
         Registro de usuários
+
         """
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
