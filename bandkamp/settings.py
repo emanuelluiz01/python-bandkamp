@@ -106,11 +106,11 @@ DATABASES = {
     }
 }
 
-DATABASES_URL = os.getenv("DATABASES_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-if DATABASES_URL:
+if DATABASE_URL:
     db_from_env = dj_database_url.config(
-        default=DATABASES_URL,
+        default=DATABASE_URL,
         conn_max_age=500,
         ssl_require=True,
     )
